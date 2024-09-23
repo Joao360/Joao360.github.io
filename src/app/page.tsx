@@ -7,14 +7,14 @@ const Home = () => {
   return (
     <div className="flex flex-col">
       {/* Navigation Bar */}
-      <header className="flex justify-between items-center p-6 bg-white shadow-md fixed w-full z-10">
+      <header className="flex justify-between items-center p-6 bg-background shadow-md fixed w-full z-10">
         <div className="text-xl font-bold">João Graça</div>
         <nav className="flex space-x-6 text-gray-700">
           <a href="#about" className="hover:text-gray-900">Sobre Mim</a>
           <a href="#experience" className="hover:text-gray-900">Currículo</a>
           <a href="#projects" className="hover:text-gray-900">Projetos</a>
         </nav>
-        <a href="#contact" className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+        <a href="#contact" className="px-4 py-2 bg-blue text-white rounded hover:bg-blue">
           Contato
         </a>
       </header>
@@ -22,8 +22,8 @@ const Home = () => {
       {/* First Section - Profile */}
       <section id="about" className="flex min-h-screen">
         {/* Left Section (Profile Card) */}
-        <div className="w-1/3 bg-beige p-12 flex flex-col items-center justify-center">
-          <div className="bg-white p-8 rounded-lg shadow-lg">
+        <div className="w-1/3 bg-beige p-12 flex flex-col items-end justify-center">
+          <div className="bg-background p-8 rounded-lg shadow-lg">
             <div className="flex flex-col items-center">
               <div className="rounded-full overflow-hidden w-36 h-36 mb-6">
                 <Image
@@ -48,11 +48,11 @@ const Home = () => {
         </div>
 
         {/* Right Section (Main Content) */}
-        <div className="w-2/3 p-12 flex flex-col justify-center bg-white">
+        <div className="w-2/3 p-12 flex flex-col justify-center bg-background">
           <h1 className="text-6xl font-bold mb-4">Olá</h1>
           <p className="text-xl font-light mb-8">Meu perfil e meus projetos</p>
           <div className="flex space-x-4 mb-8">
-            <a href="#curriculo" className="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700">Currículo</a>
+            <a href="#curriculo" className="px-6 py-3 bg-blue text-white rounded hover:bg-blue">Currículo</a>
             <a href="#projetos" className="px-6 py-3 border border-gray-300 text-gray-700 rounded hover:bg-gray-100">Projetos</a>
           </div>
           <p className="text-gray-600 max-w-md">
@@ -105,9 +105,8 @@ const Home = () => {
       </section>
 
       {/* Footer or Contact Section */}
-      <footer id="contact" className="py-20 flex items-center justify-center bg-gray-200">
+      <footer id="contact" className="py-10 flex items-center justify-center bg-gray-200">
         <div>
-          <h2 className="text-4xl font-bold mb-4">Contato</h2>
           <p>&copy; 2024 João Graça. Todos os direitos reservados.</p>
         </div>
       </footer>
