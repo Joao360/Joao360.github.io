@@ -6,7 +6,7 @@ import AboutMe from './components/AboutMe';
 
 const Home = () => {
   return (
-    <div className="flex flex-col">
+    <main>
       {/* Navigation Bar */}
       <header className="flex justify-between items-center p-6 bg-background shadow-md fixed w-full z-10">
         <div className="text-xl font-bold">João Graça</div>
@@ -30,7 +30,7 @@ const Home = () => {
           <p>&copy; 2024 João Graça. Todos os direitos reservados.</p>
         </div>
       </footer>
-    </div>
+    </main>
   );
 };
 
