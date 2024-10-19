@@ -6,7 +6,7 @@ const Experience = () => {
     <section id="experience" className="relative min-h-screen py-20 bg-gray-100 flex flex-col justify-center">
       <h2 className="text-4xl font-bold text-center mb-12">Experience</h2>
 
-      <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+      <div className="flex flex-col items-center space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
 
         <ExperienceItem
           company={"Order Placed"}

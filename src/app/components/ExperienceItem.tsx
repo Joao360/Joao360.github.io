@@ -9,13 +9,13 @@ interface ExperienceItemProps {
 
 const ExperienceItem = ({ company, description, timeline, icon, isActive = true }: ExperienceItemProps) => {
     return (
-        <div className={`relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group ${isActive ? 'is-active' : ''}`}>
+        <div className={`flex flex-row relative items-center md:odd:flex-row-reverse group ${isActive ? 'is-active' : ''}`}>
 
             <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 group-[.is-active]:bg-emerald-500 text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
                 {icon}
             </div>
 
-            <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded border border-slate-200 shadow">
+            <div className="w-full md:w-2/5 bg-white p-4 rounded border border-slate-200 shadow">
                 <div className="flex items-center justify-between space-x-2 mb-1">
                     <div className="font-bold text-slate-900">{company}</div>
                     <p className="font-caveat font-medium text-indigo-500">{timeline}</p>
