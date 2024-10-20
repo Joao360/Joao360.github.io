@@ -30,13 +30,17 @@ const AboutMe = () => {
       </div>
 
       {/* Right Section (Main Content) */}
-      <div className="w-full sm:w-2/3 p-12 flex flex-col justify-center bg-white">
+      <div className="w-full sm:w-2/3 p-12 flex flex-col justify-center items-center sm:items-start bg-white">
         <h1 className="text-6xl font-bold mb-4 text-black">{"Hey!"}</h1>
+        
         <p className="text-xl font-light mb-8 text-black">{"My profile and my projects"}</p>
-        <div className="flex space-x-4 mb-8">
-          <a href="#curriculo" className="px-6 py-3 bg-blue-800 text-white rounded hover:bg-blue">{"Experience"}</a>
-          <a href="#projetos" className="px-6 py-3 border border-gray-300 text-gray-700 rounded hover:bg-gray-100">{"Projects"}</a>
+        
+        <div className="flex flex-col sm:flex-row sm:space-x-4 mb-8 space-y-4 sm:space-y-0">
+          <a href="#curriculo" className="w-40 px-6 py-3 bg-blue-800 text-white rounded hover:bg-blue">{"Experience"}</a>
+        
+          <a href="#projetos" className="w-40 px-6 py-3 bg-white border border-gray-300 text-gray-700 rounded hover:bg-gray-100">{"Projects"}</a>
         </div>
+        
         <p className="text-gray-600 max-w-md">
           {"Passionate about mobile app development, I've honed my skills in Android app development and led a small mobile team on a React Native project. With a solid foundation in native frameworks, I've successfully delivered top-notch mobile applications."}
         </p>
