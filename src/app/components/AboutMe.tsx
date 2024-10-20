@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 const AboutMe = () => {
   return (
-    <section id="about" className="flex min-h-screen">
+    <section id="about" className="flex flex-col sm:flex-row sm:min-h-screen">
       {/* Left Section (Profile Card) */}
-      <div className="w-1/3 bg-amber-100 p-12 flex flex-col items-end justify-center">
+      <div className="w-full sm:w-1/3 bg-amber-100 p-12 flex flex-col items-center sm:items-end justify-center">
         <div className="bg-white p-8 rounded-lg shadow-lg">
           <div className="flex flex-col items-center">
             <div className="rounded-full overflow-hidden w-36 h-36 mb-6">
@@ -30,7 +30,7 @@ const AboutMe = () => {
       </div>
 
       {/* Right Section (Main Content) */}
-      <div className="w-2/3 p-12 flex flex-col justify-center bg-white">
+      <div className="w-full sm:w-2/3 p-12 flex flex-col justify-center bg-white">
         <h1 className="text-6xl font-bold mb-4 text-black">{"Hey!"}</h1>
         <p className="text-xl font-light mb-8 text-black">{"My profile and my projects"}</p>
         <div className="flex space-x-4 mb-8">
