@@ -5,17 +5,14 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --secondary: #f5efe6;
 }
 
-/* TODO add dark mode compatibility */
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-    --secondary: #2c2c2c;
   }
-} */
+}
 
 body {
   color: var(--foreground);
