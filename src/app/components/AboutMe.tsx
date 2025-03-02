@@ -1,49 +1,57 @@
 import Image from 'next/image';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 
 const AboutMe = () => {
   return (
-    <section id="about" className="flex flex-col sm:flex-row sm:min-h-screen">
-      {/* Left Section (Profile Card) */}
-      <div className="w-full sm:w-1/3 bg-amber-100 p-12 flex flex-col items-center sm:items-end justify-center">
-        <div className="bg-white p-8 rounded-lg shadow-lg">
-          <div className="flex flex-col items-center">
-            <div className="rounded-full overflow-hidden w-36 h-36 mb-6">
-              <Image
-                alt="Profile photo"
-                src="/profile-photo.jpg"
-                width={144}
-                height={144}
-                className="object-cover"
-              />
-            </div>
-            <h2 className="text-xl font-bold mb-2 text-black">{"João Graça"}</h2>
-            <p className="text-gray-500 mb-4">{"Android Engineer"}</p>
-            <div className="w-12 h-1 bg-blue-600 mb-4"></div>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-600 hover:text-blue-500"><i className="fab fa-facebook"></i></a>
-              <a href="#" className="text-gray-600 hover:text-blue-500"><i className="fab fa-twitter"></i></a>
-              <a href="#" className="text-gray-600 hover:text-blue-500"><i className="fab fa-linkedin"></i></a>
-              <a href="#" className="text-gray-600 hover:text-blue-500"><i className="fab fa-instagram"></i></a>
-            </div>
-          </div>
+    <section id="about" className="sm:min-h-screen flex items-center justify-center bg-white">
+      <div className='flex flex-col gap-6 justify-center items-center p-5'>
+        <div className="rounded-full overflow-hidden w-32 h-32 sm:w-52 sm:h-52">
+          <Image
+            alt="Profile photo"
+            src="/profile-photo.jpg"
+            width={208}
+            height={208}
+            className="object-cover w-full h-full"
+          />
         </div>
-      </div>
 
-      {/* Right Section (Main Content) */}
-      <div className="w-full sm:w-2/3 p-12 flex flex-col justify-center items-center sm:items-start bg-white">
-        <h1 className="text-6xl font-bold mb-4 text-black">{"Hey!"}</h1>
-        
-        <p className="text-xl font-light mb-8 text-black">{"My profile and my projects"}</p>
-        
-        <div className="flex flex-col sm:flex-row sm:space-x-4 mb-8 space-y-4 sm:space-y-0">
-          <a href="#curriculo" className="w-40 px-6 py-3 bg-blue-800 text-white rounded hover:bg-blue">{"Experience"}</a>
-        
-          <a href="#projetos" className="w-40 px-6 py-3 bg-white border border-gray-300 text-gray-700 rounded hover:bg-gray-100">{"Projects"}</a>
-        </div>
-        
-        <p className="text-gray-600 max-w-md">
-          {"Passionate about mobile app development, I've honed my skills in Android app development and led a small mobile team on a React Native project. With a solid foundation in native frameworks, I've successfully delivered top-notch mobile applications."}
+        <h1 className="text-3xl sm:text-5xl font-bold text-black text-center">{"Hi! I'm João Graça"}</h1>
+
+        <p className="text-gray-500 max-w-3xl text-center text-lg">
+          {"Mobile Engineer with "}
+          <strong>{"7+ years of experience"}</strong>
+          {" across "}
+          <strong>{"iOS, Android, and React Native"}</strong>
+          {". I find joy building impactful, scalable apps. Leveraging "}
+          <strong>{"AI-tools"}</strong>
+          {" to boost efficiency and innovation."}
         </p>
+
+        <div className="flex gap-6">
+          <a
+            href="https://github.com/Joao360"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 hover:text-gray-900 transition-colors"
+          >
+            <FaGithub size={24} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/joaograca360"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 hover:text-gray-900 transition-colors"
+          >
+            <FaLinkedin size={24} />
+          </a>
+          <a
+            href="mailto:joao.graca360@gmail.com"
+            className="text-gray-600 hover:text-gray-900 transition-colors"
+          >
+            <MdEmail size={24} />
+          </a>
+        </div>
       </div>
     </section>
   )
