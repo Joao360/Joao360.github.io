@@ -8,12 +8,12 @@ import Footer from '../components/Footer';
 
 const Home = () => {
   return (
-    <div className='bg-gray-100'>
+    <main className='bg-gray-100'>
       <NavigationBar />
       <AboutMe />
       <Experience />
       <Footer />
-    </div>
+    </main>
   );
 };
 
