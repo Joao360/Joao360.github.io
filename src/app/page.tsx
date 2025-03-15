@@ -5,6 +5,7 @@ import NavigationBar from '../components/NavigationBar';
 import Experience from '../components/Experience';
 import AboutMe from '../components/AboutMe';
 import Footer from '../components/Footer';
+import Contact from '@/components/Contact';
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <NavigationBar />
       <AboutMe />
       <Experience />
+      <Contact />
       <Footer />
     </main>
   );
