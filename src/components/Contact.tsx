@@ -2,12 +2,6 @@
 
 import { FC } from 'react';
 
-export type FormData = {
-  name: string;
-  email: string;
-  message: string;
-};
-
 const Contact: FC = () => {
   return (
     <div className='flex flex-col items-center'>
