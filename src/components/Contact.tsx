@@ -3,6 +3,17 @@
 import { FC } from 'react';
 
 const Contact: FC = () => {
+  const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    await fetch("/__forms.html", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(), // Type assertion for compatibility
+    });
+    // Success and error handling ...
+  };
+
   return (
     <div className='flex flex-col items-center'>
       <div className='mb-10 mt-10 flex w-full flex-col items-center justify-center'>
@@ -14,7 +25,7 @@ const Contact: FC = () => {
         </p>
       </div>
 
-      <form className='w-full max-w-lg bg-white rounded-lg shadow-lg p-8' name='contact' action="/success" method='POST' data-netlify='true'>
+      <form className='w-full max-w-lg bg-white rounded-lg shadow-lg p-8' onSubmit={handleFormSubmit}>
         <input type='hidden' name='form-name' value='contact' />
         <div className='mb-5'>
           <label
