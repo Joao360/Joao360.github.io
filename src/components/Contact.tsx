@@ -20,49 +20,49 @@ const Contact: FC = () => {
         </p>
       </div>
 
-      <form className='p-5 w-full sm:w-1/2' name='contact' action="/success" method='POST' data-netlify='true'>
+      <form className='w-full max-w-lg bg-white rounded-lg shadow-lg p-8' name='contact' action="/success" method='POST' data-netlify='true'>
         <input type='hidden' name='form-name' value='contact' />
         <div className='mb-5'>
           <label
             htmlFor='name'
-            className='mb-3 block text-base font-medium text-black'
+            className='mb-3 block text-base font-medium text-gray-700'
           >
             Your Name
           </label>
           <input
             type='text'
             placeholder='Full Name'
-            className='w-full rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-blue-950 focus:shadow-md'
+            className='w-full rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500 transition duration-200'
           />
         </div>
         <div className='mb-5'>
           <label
             htmlFor='email'
-            className='mb-3 block text-base font-medium text-black'
+            className='mb-3 block text-base font-medium text-gray-700'
           >
             Email Address
           </label>
           <input
             type='email'
             placeholder='example@domain.com'
-            className='w-full rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-blue-950 focus:shadow-md'
+            className='w-full rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500 transition duration-200'
           />
         </div>
         <div className='mb-5'>
           <label
             htmlFor='message'
-            className='mb-3 block text-base font-medium text-black'
+            className='mb-3 block text-base font-medium text-gray-700'
           >
             Message
           </label>
           <textarea
             rows={4}
             placeholder='Type your message'
-            className='w-full resize-none rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-blue-950 focus:shadow-md'
+            className='w-full resize-none rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500 transition duration-200'
           ></textarea>
         </div>
         <div className='flex justify-center'>
-          <button className='hover:shadow-form rounded-md bg-blue-950 py-3 px-8 text-base font-semibold text-white outline-none'>
+          <button className='hover:shadow-lg hover:bg-blue-600 transform hover:scale-105 transition duration-300 rounded-md bg-blue-500 py-3 px-8 text-base font-semibold text-white outline-none'>
             Submit
           </button>
         </div>
