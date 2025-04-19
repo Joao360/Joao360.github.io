@@ -3,7 +3,7 @@
 import { FC } from 'react';
 
 const Contact: FC = () => {
-  const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
+  const onSubmitForm = async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     await fetch(
@@ -27,7 +27,10 @@ const Contact: FC = () => {
         </p>
       </div>
 
-      <form className='w-full max-w-lg bg-white rounded-lg shadow-lg p-8' onSubmit={handleFormSubmit}>
+      <form 
+        className='w-full max-w-lg bg-white rounded-lg shadow-lg p-8' 
+        onSubmit={onSubmitForm}
+      >
         <input type='hidden' name='form-name' value='contact' />
         <div className='mb-5'>
           <label
