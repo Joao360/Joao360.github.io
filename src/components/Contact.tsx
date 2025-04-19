@@ -52,7 +52,7 @@ const Contact: FC = () => {
       </div>
 
       <form
-        name='contact'
+        name='feedback'
         className='w-full max-w-lg bg-white rounded-lg shadow-lg p-8'
         onSubmit={onSubmitForm}
       >
