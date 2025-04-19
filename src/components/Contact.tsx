@@ -6,12 +6,14 @@ const Contact: FC = () => {
   const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
-    await fetch("/__forms.html", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(), // Type assertion for compatibility
-    });
-    // Success and error handling ...
+    await fetch(
+      "/__forms.html",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
+      }
+    );
   };
 
   return (
