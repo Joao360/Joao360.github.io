@@ -9,16 +9,23 @@ const Contact: FC = () => {
 
   const onSubmitForm = async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
+
     try {
       setStatus('pending');
       setError(null);
+      
+      const formObject: Record<string, string> = {};
+      const formData = new FormData(event.currentTarget);
+      formData.forEach((value, key) => {
+        formObject[key] = value.toString();
+      });
+      
       const res = await fetch(
         "/_forms.html",
         {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
+          body: new URLSearchParams(formObject).toString(),
         }
       );
 
